@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
+import NotFoundScreen from "./common/NotFoundScreen";
+
+// import Customer from "./Customer";
+import CustomerRoutes from "./pages/customer";
+import AdminRoutes from "./pages/admin";
+import SellerRoutes from "./pages/seller";
+import LandingPage from "./components/LandingPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router basename="/">
+        <Routes>
+          <Route path="/admin/*" element={<AdminRoutes />} />
+          <Route path="/seller/*" element={<SellerRoutes />} />
+          <Route path="/customer/*" element={<CustomerRoutes />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="*" element={<NotFoundScreen />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 

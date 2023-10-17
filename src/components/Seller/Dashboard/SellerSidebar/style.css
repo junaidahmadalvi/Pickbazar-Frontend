@@ -1,0 +1,11 @@
+.ant-layout-sider {
+  background: white !important;
+  box-shadow: 0 1px 3px 0 !important;
+}
+
+.ant-menu-item {
+  padding: 25px 0px;
+  font-size: 1.1rem;
+  color: #4b5566;
+  font-weight: 500;
+}

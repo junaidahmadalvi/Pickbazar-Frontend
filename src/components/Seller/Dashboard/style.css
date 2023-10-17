@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+}
+
+nav {
+  width: 100%;
+  /* height: 20%; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 100;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  /* gap: 5px; */
+  width: 100%;
+  flex: 1;
+  margin-top: 7%; /* Adjust this value based on your design */
+  /* margin-left: 20%; This creates space for the fixed nav and aside */
+  overflow-x: hidden;
+}
+
+aside {
+  width: 20%;
+  min-height: 100vh;
+  position: fixed;
+  padding-top: 5%;
+  top: 0;
+  left: 0;
+}
+
+/* section {
+} */

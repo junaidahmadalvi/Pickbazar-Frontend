@@ -1,4 +1,4 @@
-import "./style.css";
+import "./style.module.css";
 
 import { Menu, Dropdown, Input, Button, Space } from "antd";
 import {

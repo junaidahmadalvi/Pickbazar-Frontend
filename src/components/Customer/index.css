@@ -1,0 +1,43 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 35rem;
+  max-width: 100%;
+  /* border: 1px solid black; */
+  /* background-image: url("https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg"); */
+  background-image: url("https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F904%2Fgrocery.png&w=1200&q=75");
+  background-size: cover;
+}
+.header-title-1 {
+  font-size: 3rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+}
+.header-title-2 {
+  font-size: 1.25rem;
+  line-height: 2.5rem;
+  /* font-weight: 700; */
+}
+/* .ant-input {
+  height: 4rem;
+  width: 40rem;
+} */
+/* .ant-input-group .ant-input {
+  width: 4rem !important;
+  margin-bottom: 0;
+  text-align: inherit;
+} */
+
+.cus-search {
+  /* height: 5rem; */
+  width: 40rem;
+  font-weight: bold;
+}
+.cus-search button {
+  background-color: rgb(0, 159, 127) !important;
+  color: white !important;
+  font-weight: 500;
+  font-size: 1rem;
+}

@@ -7,7 +7,7 @@ import CustomerNavbar from "../components/Customer/CustomerNavbar";
 function CustomerRoutes() {
   return (
     <>
-      {/* <CustomerNavbar /> */}
+      <CustomerNavbar />
       <Routes>
         <Route path="/portal" element={<CustomerPortal />} />
         <Route path="*" element={<NotFoundScreen />} />

@@ -39,21 +39,21 @@ const CustomerNavbar = () => {
 
   return (
     <>
-      <div className="navbar">
-        <div className="nav-part-1">
-          <div className="logo">
+      <div className="cus-navbar">
+        <div className="cus-nav-part-1">
+          <div className="cus-logo">
             <img
               src="https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F860%2FPickBazar.png&w=1920&q=75"
               alt="Logo"
             />
           </div>
           <Dropdown overlay={menu} trigger={["click"]}>
-            <Button className="nav-dropdown">
+            <Button className="cus-nav-dropdown">
               <AppleOutlined />
               Menu <DownOutlined />
             </Button>
           </Dropdown>
-          <Space className="nav-search">
+          <Space className="cus-nav-search">
             <Search
               placeholder="Search location..."
               enterButton={
@@ -63,15 +63,15 @@ const CustomerNavbar = () => {
           </Space>
         </div>
 
-        <div className="nav-part-2">
+        <div className="cus-nav-part-2">
           <Menu mode="horizontal" defaultSelectedKeys={["shops"]}>
             <Menu.Item key="shops">Shops</Menu.Item>
             <Menu.Item key="offers">Offers</Menu.Item>
             <Menu.Item key="faq">FAQ</Menu.Item>
             <Menu.Item key="contacts">Contacts</Menu.Item>
           </Menu>
-          <Button className="nav-btn">Become Seller</Button>
-          <Button className="nav-btn" onClick={showModelFunc}>
+          <Button className="cus-nav-btn">Become Seller</Button>
+          <Button className="cus-nav-btn" onClick={showModelFunc}>
             Join
           </Button>
           {showModel && (

@@ -1,0 +1,23 @@
+.profile {
+  position: absolute;
+  top: 7rem;
+  left: 1rem;
+  /* border: 1px solid; */
+  background-color: rgb(243, 244, 246);
+  display: flex;
+  width: 98%;
+  justify-content: center;
+  gap: 6rem;
+}
+
+.sid {
+  max-width: 20%;
+  /* border: 1px solid lightgray; */
+  background-color: white;
+}
+.profile-forms {
+  border: 1px solid lightgray;
+  background-color: white;
+  width: 60%;
+  padding: 2rem;
+}

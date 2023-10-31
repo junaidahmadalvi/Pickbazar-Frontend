@@ -1,0 +1,44 @@
+.cus-shops-con {
+  position: absolute;
+  top: 7rem;
+  box-sizing: border-box;
+  justify-content: start;
+  gap: 1rem;
+  background-color: rgb(243, 244, 246);
+  padding: 1rem 1rem 1rem 7rem;
+}
+
+.shop-item {
+  border-radius: 0.3rem;
+
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid lightgray;
+  background-color: white;
+  width: 100%;
+  /* max-width: 100%; */
+}
+.shop-logo {
+  width: 25%;
+  /* border */
+  /* border: 2px dashed gainsboro;
+  border-radius: 1rem; */
+}
+.shop-logo img {
+  width: 100%;
+  border-radius: 50%;
+}
+.shop-data {
+  width: 75%;
+  /* padding: 5rem; */
+  padding: 0px;
+}
+.shop-data h3 {
+  font-size: 1.3rem;
+}
+.shop-data p {
+  font-size: 0.9rem;
+  color: #6b7080;
+}

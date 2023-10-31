@@ -1,0 +1,27 @@
+.cus-offer-con {
+  position: absolute;
+  top: 7rem;
+  /* border: 5px solid; */
+  box-sizing: border-box;
+  justify-content: center;
+  gap: 6rem;
+  background-color: rgb(243, 244, 246);
+  padding: 1rem;
+}
+
+.offer-item {
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 3rem;
+  padding: 1rem;
+}
+.dote {
+  /* border */
+  border: 2px dashed gainsboro;
+  border-radius: 1rem;
+}
+.offer-item p {
+  /* padding: 5rem; */
+}

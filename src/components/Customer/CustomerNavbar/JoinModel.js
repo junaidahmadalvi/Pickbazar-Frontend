@@ -1,5 +1,5 @@
-import { Modal, Button, Form, Input, Radio } from "antd";
-import { useState } from "react";
+import { Modal, Button, Form, Input } from "antd";
+// import { useState } from "react";
 import "./style.css";
 const JoinModel = ({ showModalProp, closeModalProp }) => {
   const onFinish = (values) => {
@@ -17,6 +17,7 @@ const JoinModel = ({ showModalProp, closeModalProp }) => {
             src="https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F860%2FPickBazar.png&w=1920&q=75"
             alt="Logo"
           />
+          <h3>Customer Login</h3>
           <p>Login with your email & password</p>
         </div>
         <Form
@@ -67,22 +68,6 @@ const JoinModel = ({ showModalProp, closeModalProp }) => {
           <Form.Item wrapperCol={{ span: 24 }}>
             <Button htmlType="submit" className="model-btn">
               Login
-            </Button>
-          </Form.Item>
-
-          <center>
-            <p>Or</p>
-          </center>
-
-          <Form.Item wrapperCol={{ span: 24 }}>
-            <Button htmlType="submit" className="model-btn">
-              Login with Google
-            </Button>
-          </Form.Item>
-
-          <Form.Item wrapperCol={{ span: 24 }}>
-            <Button htmlType="submit" className="model-btn">
-              Login with Mobile number
             </Button>
           </Form.Item>
 

@@ -1,12 +1,11 @@
 import "./style.css";
 
-import { Menu, Dropdown, Input, Button, Space } from "antd";
+import { Menu, Button } from "antd";
 import {
   UserOutlined,
   EnvironmentOutlined,
   QuestionCircleOutlined,
   PhoneOutlined,
-  AppleOutlined,
 } from "@ant-design/icons";
 // import JoinModel from "./JoinModel";
 

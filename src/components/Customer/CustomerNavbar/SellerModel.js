@@ -1,55 +1,23 @@
-import React from "react";
-import { Button, Form, Input } from "antd";
+import { Modal, Button, Form, Input } from "antd";
+// import { useState } from "react";
 import "./style.css";
-
-import { useMutation } from "react-query";
-import { AUTH } from "../../Api";
-import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
-import { setItemInLocalStorage } from "../../helper";
-
-function LandingPage() {
-  const navigate = useNavigate();
-  const mutation = useMutation(AUTH.postUser, {
-    onSuccess: (response) => {
-      const userType = response?.data?.userType;
-      console.log("userType", userType);
-
-      const token = response?.data?.token;
-      console.log("token", token);
-      token && setItemInLocalStorage("token", token);
-      userType && setItemInLocalStorage("userType", userType);
-      if (userType) {
-        toast.success(`${userType} Login Successfully`);
-
-        userType === "customer"
-          ? navigate(`/${userType}/portal`)
-          : navigate(`/${userType}/dashboard`);
-      }
-    },
-    onError: (error) => {
-      console.log("--mutation error---", error);
-      if (error?.response?.status === 400) {
-        const errorMessage = error?.response?.data?.error;
-        toast.error(errorMessage); // Display the error message using React-Toastify
-      }
-    },
-  });
+const SellerModel = ({ showModalProp, closeModalProp }) => {
   const onFinish = (values) => {
     console.log("Success:", values);
-    mutation.mutate(values);
+    closeModalProp();
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
   return (
     <>
-      <div className="login-container">
+      <Modal open={showModalProp} footer={null} onCancel={closeModalProp}>
         <div className="model-header">
           <img
             src="https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F860%2FPickBazar.png&w=1920&q=75"
             alt="Logo"
           />
+          <h3>Seller Login</h3>
           <p>Login with your email & password</p>
         </div>
         <Form
@@ -62,7 +30,7 @@ function LandingPage() {
             span: 24,
           }}
           style={{
-            minWidth: "100%",
+            maxWidth: 600,
           }}
           initialValues={{
             remember: true,
@@ -72,12 +40,12 @@ function LandingPage() {
           autoComplete="off"
         >
           <Form.Item
-            label="Email"
-            name="email"
+            label="Username"
+            name="username"
             rules={[
               {
                 required: true,
-                message: "Please input your email!",
+                message: "Please input your username!",
               },
             ]}
           >
@@ -103,17 +71,12 @@ function LandingPage() {
             </Button>
           </Form.Item>
 
-          {/* <center>
-            <p>Or</p>
-          </center> */}
-
-          {/* <center>
+          <center>
             <p>Don't have any account? Register</p>
-          </center> */}
+          </center>
         </Form>
-      </div>
+      </Modal>
     </>
   );
-}
-
-export default LandingPage;
+};
+export default SellerModel;

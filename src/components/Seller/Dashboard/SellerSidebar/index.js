@@ -4,10 +4,7 @@ import { Layout, Menu } from "antd";
 import MenuItem from "./MenuItem"; // Import the MenuItem component
 import {
   AppstoreOutlined,
-  GroupOutlined,
-  CloudOutlined,
   ShopOutlined,
-  TeamOutlined,
   UploadOutlined,
   DashboardOutlined,
 } from "@ant-design/icons";

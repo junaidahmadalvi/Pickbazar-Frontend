@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useQuery } from "react-query";
+import { getItemFromLocalStorage } from "../helper";
 
+const customerToken = getItemFromLocalStorage("token");
 const NextApi = axios.create({
   baseURL: "http://localhost:5000/public",
   headers: {
@@ -8,6 +10,14 @@ const NextApi = axios.create({
   },
 });
 export default NextApi;
+
+export const NextPtdApi = axios.create({
+  baseURL: "http://localhost:5000/api",
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
+NextPtdApi.defaults.headers.common["Authorization"] = `Bearer ${customerToken}`;
 
 export const defaultQueryFn = async (key) => {
   try {
@@ -28,11 +38,11 @@ export const NextPostRequest = async (url, params) => {
   return data;
 };
 export const NextPutRequest = async (url, params) => {
-  const { data } = await NextApi.put(url, params);
+  const { data } = await NextPtdApi.put(url, params);
   return data;
 };
 export const NextDeleteRequest = async (url, params) => {
-  const { data } = await NextApi.delete(url, { params: params });
+  const { data } = await NextPtdApi.delete(url, { params: params });
   return data;
 };
 
@@ -58,8 +68,9 @@ export const CUSTOMER = {
   fetchAll: () => NextFetchRequest(`/customer`),
   fetchAllShop: () => NextFetchRequest(`/customer/shops`),
   postCustomer: (payload) => NextPostRequest(`/customer`, payload),
-  putCustomer: (payload, customer_id) =>
-    NextPutRequest(`/customer/${payload.id}`, payload),
+  putCustomer: (payload) => NextPutRequest(`/customer`, payload),
+  putCustomerPassword: (payload) =>
+    NextPutRequest(`/customer/password`, payload),
   dellCustomer: (payload) => NextDeleteRequest(`/customer/${payload}`),
 };
 

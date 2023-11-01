@@ -48,9 +48,6 @@ const CustomerNavbar = () => {
   );
   const [userType, setuserType] = useState(getItemFromLocalStorage("userType"));
 
-  // const customerToken = getItemFromLocalStorage("token");
-  // const userType = getItemFromLocalStorage("userType");
-
   const handleSellerModal = () => {
     setShowSellerModel(true);
   };

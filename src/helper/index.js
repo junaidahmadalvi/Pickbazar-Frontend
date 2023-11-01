@@ -1,23 +1,22 @@
-// Get the token from localStorage
+// Get the Item from localStorage
 function getItemFromLocalStorage(key) {
   try {
     return localStorage.getItem(key);
   } catch (error) {
-    // Handle possible security error or other issues
     console.error(`Failed to retrieve ${key} in localStorage:`, error);
     return null;
   }
 }
 
-// Set the token in localStorage
+// Set the Item in localStorage
 function setItemInLocalStorage(key, value) {
   try {
     return localStorage.setItem(key, value);
   } catch (error) {
-    // Handle possible quota exceeded error or other issues
     console.error(`Failed to store ${key} in localStorage:`, error);
   }
 }
+// Remove the Item in localStorage
 
 function removeItemFromLocalStorage(key) {
   try {

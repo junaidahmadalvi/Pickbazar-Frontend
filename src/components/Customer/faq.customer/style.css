@@ -1,4 +1,27 @@
+body {
+  background-color: rgb(243, 244, 246);
+}
 .cus-faq {
   position: absolute;
   top: 7rem;
+  width: 100%;
+}
+.question {
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 0.5rem;
+  padding: 0.6rem;
+  width: 80%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.bold {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.text {
+  font-size: 1.1rem !important;
 }
